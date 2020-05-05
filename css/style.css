@@ -1,0 +1,215 @@
+/* #region General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background: url(../img/bg.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+/* #endregion General */
+
+/* #region ARTICLE */
+article {
+  padding: 40px 0;
+}
+
+/* #endregion ARTICLE */
+
+/* #region HEADER */
+header {
+  width: 98%;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+header > h1 {
+  text-align: center;
+  cursor: pointer;
+}
+
+header > h1 > a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+header > #bar {
+  width: 100px;
+  height: 10px;
+  margin: 40px auto;
+  background-color: #34495e;
+}
+
+/* #endregion HEADER */
+
+/* #region Up and Down Arrows */
+header > a > img {
+  width: 40px;
+  position: fixed;
+  opacity: 0%;
+  left: calc(90% - 15px);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header > a > img#down-arrow {
+  top: 90%;
+}
+
+header > a > img:active,
+header > a:active > img {
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+/* #endregion HEADER */
+
+/* #region FORM */
+form {
+  max-width: 700px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+/* #region Input Field Div */
+form > div.input-field {
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+form > div.input-field:hover,
+form > div.input-field:active {
+  transition: 0.3s;
+  background-color: rgba(36, 36, 36, 0.288);
+}
+
+@media only screen and (max-width: 360px) {
+  form > div.input-field {
+    padding: 20px 5px;
+  }
+}
+
+/* #endregion Input Field Div */
+
+/* #region Label */
+form > div.input-field > label {
+  font-size: 18px;
+  color: rgba(199, 199, 199, 0.733);
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  display: block;
+  text-align: left;
+}
+
+form > div.input-field:hover > label {
+  transition: 0.3s;
+  color: #ddd;
+}
+
+@media only screen and (max-width: 360px) {
+  form > div.input-field > label {
+    text-align: center;
+  }
+}
+
+/* #endregion Label */
+
+/* #region Input */
+form > div.input-field > .input {
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin: 16px 0;
+  border: 0;
+  background: #111;
+  padding: 10px 30px;
+  color: #ddd;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+form > div.input-field > .input:hover {
+  transition: 0.3s;
+  box-shadow: 0 0 5px 2px #34495e;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 0 5px 2px #34495e;
+  -o-box-shadow: 0 0 5px 2px #34495e;
+}
+
+form > div.input-field > .input:focus {
+  transition: 0.3s;
+  outline: none;
+  box-shadow: 0 0 10px 4px #34495e;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 0 10px 4px #34495e;
+  -o-box-shadow: 0 0 10px 4px #34495e;
+}
+
+/* #endregion Input */
+
+/* #region Placeholder */
+/* When hovering on the div */
+.input:hover::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  transition: 0.3s;
+  color: #ddd;
+  opacity: 1; /* Firefox */
+}
+
+.input:hover::-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  transition: 0.3s;
+  color: #ddd;
+}
+
+.input:hover::-ms-input-placeholder {
+  /* Microsoft Edge */
+  transition: 0.3s;
+  color: #ddd;
+}
+
+/* Default Placeholder */
+.input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  transition: 0.3s;
+  color: rgb(124, 124, 124);
+  opacity: 1; /* Firefox */
+}
+
+.input::-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  transition: 0.3s;
+  color: rgb(124, 124, 124);
+}
+
+.input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  transition: 0.3s;
+  color: rgb(124, 124, 124);
+}
+
+/* #endregion Placeholder */
+
+/* #region Text Area */
+form > div.input-field > textarea {
+  resize: none;
+}
+/* #endregion Text Area */
+
+/* #region Upload Image */
+form > div.input-field > div#input-images {
+  height: auto;
+}
+/* #endregion Upload Image */
+
+/* #endregion FORM */
